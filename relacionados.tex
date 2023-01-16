@@ -1,6 +1,5 @@
 \chapter{TRABALHOS RELACIONADOS}
 \label{chp:relatedWorks}
-\graphicspath{ {./resources/images/relacionados} }
 
 O presente capítulo apresenta o estado da arte das duas principais áreas relacionadas ao presente trabalho, Essas áreas, a saber, são: busca de código e processamento de linguagem natural. Os trabalhos apresentados nesses capítulo estão ordenados em ordem cronológica de publicação. Por fim, é apresentada também uma conclusão sobre os trabalhos citados neste capítulo.
 
@@ -18,7 +17,7 @@ O presente capítulo apresenta o estado da arte das duas principais áreas relac
 
 \textcite{Yao2019CoaCorCA} propuseram um modelo de aprendizagem por reforço, chamado \gls{coacor}, o qual gera descrições (em linguagem natural) de código-fonte a fim de melhorar modelos de busca de código. Os testes do estudo foram realizados com a base de dados \textit{StaQC} \cite{Yao2018StaQCAS} e utilizando os modelos de busca de código \gls{deepcs} e \textit{CODEnn}, além do \gls{mrr} e \gls{bleu} como métricas para busca de código e geração de descrição, respectivamente. Os resultados mostraram que o \gls{coacor} foi capaz de gerar descrições úteis para trechos de código, e que tais descrições foram capazes de melhorar a performance dos modelos de busca testados.
 
-\textcite{Akbar2019SCORSC} estudaram a combinação de \glspl{cam} com a semântica dos vetores de palavras obtidos pelo algoritmo \textit{word2vec}. Com isso, os autores compararam as sequências de palavras de uma consulta em linguagem natural, e de um código-fonte. Utilizando as métricas \gls{mapk}, \textit{Precision@k} e \textit{Recall@k}, além das bases de dados \textit{BUGLinks} e \textit{iBUGS}, o estudo em questão obteve melhoras entre $6\%$ e $30\%$ de acurácia na busca de código.
+\textcite{Akbar2019SCORSC} estudaram a combinação de \glspl{cam} com a semântica dos vetores de palavras obtidos pelo algoritmo \textit{word2vec}. Com isso, os autores compararam as sequências de palavras de uma consulta em linguagem natural, e de um código-fonte. Utilizando as métricas \textit{map@k}, \textit{precision@k} e \textit{recall@k}, além das bases de dados \textit{BUGLinks} e \textit{iBUGS}, o estudo em questão obteve melhoras entre $6\%$ e $30\%$ de acurácia na busca de código.
 
 \textcite{Heyman2020NeuralCS} estudaram o impacto que códigos anotados tem em modelos de busca de código. Segundo os autores, um código anotado é um trecho de código com descrições de sua intenção em linguagem natural. Durante o estudo, foram utilizados os modelos de busca de código \gls{ncs} e \gls{unif}, além das bases de dados \textit{CoNaLa}, \textit{StaQC} \cite{Yao2018StaQCAS} e SO-DS, as quais contém códigos em \emph{Python}. Como \emph{benchmark}, foram utilizadas as métricas \textit{recall@3}, \textit{recall@10} e \gls{mrr}. Ao se utilizar código anotado, obteve-se uma melhora de $20.6\%$ no \gls{mrr}, $23,9\%$ no \textit{recall@3} e $26,4\%$ no recall@10, em comparação aos métodos de busca que não utilizam código anotado. Por fim, os autores acreditam que tais melhorias poderão ser notadas mesmo como outras linguagem de programação (como Java, por exemplo), caso seja aplicado o uso de código anotado nos modelos de busca.
 
@@ -26,7 +25,7 @@ O presente capítulo apresenta o estado da arte das duas principais áreas relac
 
 \textcite{Feng2020CodeBERTAP} propuseram o \textit{CodeBERT}, um modelo bimodal para linguagem de programação e linguagem natural. O \textit{CodeBERT} utiliza uma arquitetura baseada no modelo \gls{bert}. Porém, o \textit{CodeBERT} é capaz de aceitar tanto dados bimodais (par código/linguagem natural) quanto dados unimodais (apenas código). Dados bimodais geralmente são usados para tarefas de busca de código, enquanto dados unimodais para geração de código. Com o \textit{CodeBERT}, os autores conseguiram resultados iguais ou, em alguns casos, melhores do que o estado da arte. As comparações foram feitas utilizando as métricas \gls{mrr} para busca de código e \gls{bleu} para geração de código. Por fim, como trabalhos futuros, os autores apontam a incorporação de \gls{ast} nas fases de pré-treino.
 
-\textcite{Li2020LearningCI} propuseram o \gls{cqil}, um modelo de busca de código que utiliza redes neurais convolucionais para encontrar relações léxicas e semânticas entre a consulta e o trecho de código. A fim de comparação, o estudo utilizou os modelos de busca \gls{deepcs}, \gls{unif}, Apache Lucene e \textit{CodeHow}, bem como as métricas \gls{mapk}, \textit{SuccessRate@k} e \gls{mrr}, além das base de dados \textit{CODEnn} e \textit{CosBench}. Os experimentos realizados mostraram melhora de performance em todas as métricas utilizadas. Além disso, os autores apontam que o \gls{cqil} também possui boa performance com bases de dados pequenas.
+\textcite{Li2020LearningCI} propuseram o \gls{cqil}, um modelo de busca de código que utiliza redes neurais convolucionais para encontrar relações léxicas e semânticas entre a consulta e o trecho de código. A fim de comparação, o estudo utilizou os modelos de busca \gls{deepcs}, \gls{unif}, Apache Lucene e \textit{CodeHow}, bem como as métricas \textit{map@k}, \textit{SuccessRate@k} e \gls{mrr}, além das base de dados \textit{CODEnn} e \textit{CosBench}. Os experimentos realizados mostraram melhora de performance em todas as métricas utilizadas. Além disso, os autores apontam que o \gls{cqil} também possui boa performance com bases de dados pequenas.
 
 \textcite{Ye2020LeveragingCG} utilizaram geração de código para melhor correlacionar linguagem de programação e linguagem natural. Para tanto, o modelo proposto, chamado \gls{co3}, utiliza \textit{dual
 learning} e \textit{multi-task learning}. Para os experimentos, os autores utilizaram o banco de dados \textit{StaQC} \cite{Yao2018StaQCAS}, o qual contém trechos de código das linguagens de programação \textit{SQL} e \textit{Python}. Utilizando as métricas \gls{mrr} e \gls{ndcg}, os autores obtiveram $0,585$ e $0.682$ (respectivamente) para \textit{SQL}, e $0,679$ e  $0,756$ para \textit{Python}. Como trabalhos futuros, os autores planejam explorar as interações entre as perdas de ranking para busca de código.
@@ -74,7 +73,7 @@ O gráfico da Figura \ref{fig:related-datasets} mostra as bases de dados utiliza
 \begin{figure}[htbp]
     \centering
     \caption{Bases de dados utilizadas}
-    \includegraphics[scale=0.7]{datasets.png}
+    \includegraphics[scale=0.5]{./resources/images/relacionados/datasets.png}
     \smallcaption{Fonte: Autor}
     \label{fig:related-datasets}
 \end{figure}
@@ -83,7 +82,7 @@ O gráfico \ref{fig:related-metrics} mostra as métricas utilizadas nos estudos 
 \begin{figure}[htbp]
     \centering
         \caption{Métricas utilizadas}
-        \includegraphics[scale=0.7]{metrics.png}
+        \includegraphics[scale=0.5]{./resources/images/relacionados/metrics.png}
         \smallcaption{Fonte: Autor}
         \label{fig:related-metrics}
 \end{figure}
@@ -92,7 +91,7 @@ A figura \ref{fig:related-baselines} mostra os modelos de busca de código utili
 \begin{figure}[htbp]
     \centering
         \caption{Modelos de comparação utilizados}
-        \includegraphics[scale=0.7]{baselines.png}
+        \includegraphics[scale=0.5]{./resources/images/relacionados/baselines.png}
         \smallcaption{Fonte: Autor}
         \label{fig:related-baselines}
 \end{figure}
