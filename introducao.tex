@@ -1,0 +1,19 @@
+\chapter{INTRODUÇÃO}
+\label{chp:introduction}
+
+
+Busca de código-fonte é uma tarefa essencial no trabalho de engenheiros e desenvolvedores de \textit{software} \cite{Rahman2018EvaluatingHD}. \textcite{Sadowski2015HowDS} mostrou que, em média, um engenheiro realiza 5 sessões de busca de código-fonte com 12 buscas por sessão, totalizando assim 60 buscas por código-fonte durante um dia de trabalho. \textcite{Xia2017WhatDD} também mostra que trechos de código-fonte estão entre os itens mais buscados pelos engenheiros de \textit{software}.
+
+Porém, um dos problemas conhecidos da área de recuperação de informação é o \textit{term mismatch} ou \textit{vocabulary mismatch} \cite{Furnas1987TheVP} \cite{Carpineto2012ASO}. Em busca de código-fonte, esse problema se dá quando os termos da busca providos pelo usuário não coincidem com os termos utilizados nos trechos de código-fonte correspondentes \cite{Nie2016QueryEB}. Para mitigar o problema de \textit{term mismatch} na busca de código, vem sendo aplicadas técnicas de \gls{nlp} como \textit{query expansion} \cite{Nie2016QueryEB}, modelo booleano \cite{lv2015codehow} e, mais recentemente, modelos \textit{transformers} como o \textit{CodeBERT} \cite{Feng2020CodeBERTAP}.
+
+Atualmente, os modelos \textit{transformers} se tornaram o estado da arte em busca de código-fonte utilizando linguagem natural pelo fato destes serem capazes de adicionar informações semânticas às buscas \cite{Guo2021GraphCodeBERTPC}. Isso significa que tais modelos compreendem, além das informações textuais contidas no trecho de código, informações semânticas sobre o código-fonte como quais tarefas este realiza. Isso reduz o \textit{term mismatch} nas buscas de código-fonte utilizando linguagem natural.
+
+Entretanto, observa-se que o problema de busca de código-fonte lida com dois domínios de linguagem. O primeiro é o da linguagem natural, o qual contempla tanto a descrição do código-fonte quanto os termos de busca fornecidos pelo usuário. Já o segundo domínio refere-se às linguagens de programação, nas quais são escritos os trechos de códigos-fonte que serão buscados. Além disso, modelos \textit{transformers} demandam grande quantidade de recursos computacionais durante seu treinamento em comparação com outros modelos de \textit{machine learning} como \gls{resnet} ou \gls{mlp}.
+
+Diante disso, o objetivo do presente trabalho é comparar modelos de \textit{embeddings} para recuperação de código-fonte a partir de buscas feitas em linguagem natural. Para tanto, será implementado um modelo de comparação de \textit{embeddings}, com parâmetros definidos experimentalmente conforme descrito no capítulo \ref{chp:experiments}, o qual será treinado para comparar a similaridade dos \textit{embeddings} produzidos por modelos \textit{transformers} de linguagem natural e de linguagem de programação.
+
+\section{Objetivo}
+O objetivo desse trabalho é criar e avaliar um modelo de rede neural para comparação de \textit{embeddings} gerados por redes \textit{transformers} de dois domínios diferentes: linguagem natural e linguagem de programação. 
+
+\section{Organização do trabalho}
+O presente trabalho está organizado da seguinte forma: no capítulo \ref{chp:relatedWorks} é apresentado um retrato do estado da arte das áreas que o presente trabalho abrange, como busca de código e modelos \textit{transformers}. O capítulo \ref{chp:concepts} contém os principais conceitos teóricos abordados no presente trabalho. O capítulo \ref{chp:methodology} apresenta, em detalhes, a metodologia aplicada durante o desenvolvimento do trabalho. No capítulo \ref{chp:experiments} são descritos os experimentos realizados durante o estudo.

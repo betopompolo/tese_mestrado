@@ -1,0 +1,15 @@
+\begin{resumo}
+
+\glsunsetall
+
+Ferramentas de busca de código-fonte a partir de linguagem natural são cada vez mais importantes no dia a dia de engenheiros e desenvolvedores de \textit{software}. Atualmente, modelos \textit{transformers} são o estado da arte em diversas tarefas da área de \gls{nlp}, como busca de código-fonte a partir de linguagem natural. Porém, tais modelos requerem muito tempo e recursos computacionais para serem treinados em um determinado domínio (\textit{fine-tuning)}. Por outro lado, redes neurais clássicas como \gls{mlp}, por exemplo, necessitam de menos recursos para seu treinamento, porém não obtém os resultados dos modelos \textit{transformers}. Diante desse contexto, o objetivo do presente trabalho é criar e avaliar um modelo de rede neural para comparação de \textit{embeddings} gerados por redes \textit{transformers} de dois domínios diferentes: linguagem natural e linguagem de programação. Para tanto, serão utilizados seis modelos \textit{transformers}: 3 de linguagem natural e 3 de código-fonte. Além disso, será treinada uma rede neural a fim de encontrar semelhanças entre os \textit{embeddings} gerados por dois domínios diferentes. Com isso, espera-se obter precisão semelhante ao de modelos \textit{transformers} após o \textit{fine-tuning}, sem ser necessário que tais modelos passem por tal processo.
+\keywords{busca de código-fonte, recuperação de código-fonte, linguagem natural, transformers, embedding}
+
+
+\end{resumo}
+
+\begin{abstract}
+Code search tools using natural language queries are becoming an essential tool for software engineers. Nowadays, the transformers models are the state-of-art for several natural language processing tasks such as code search using natural language. However, such models requires a lot of computational resources for training in a specific domain (fine-tuning). On the other hand, classical neural networks such as \gls{mlp} takes less computational resources for training in a specific domain, but it does not achieve the transformers models results. In this context, the goal of this paper is to both create and evaluate a neural network model for comparing transformers embeddings from two different domains: natural language and programming language. For this purpose, it will be used six different transformers models: three for natural language and three for programming language. In addition, an neural network will be trained in order to find similarities between the generated embeddings from two different domains. Hence, we hope to achieve similar precision from the transformers models after the fine-tuning, without the need of this process.
+
+\keywords{code search, code retrieval, natural language, transformers, embedding}
+\end{abstract}
