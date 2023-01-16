@@ -12,3 +12,13 @@
 *.xdy
 *.dtx
 *.mw
+mestrado.bbl
+mestrado.blg
+mestrado.fdb_latexmk
+mestrado.fls
+mestrado.ind
+mestrado.pdf
+mestrado.run.xml
+mestrado.synctex.gz
+mestrado.xmpdata
+pdfa.xmpi
