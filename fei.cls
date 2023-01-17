@@ -613,8 +613,7 @@
   \RequirePackage{hyperref}
 \fi
 
-\hypersetup{%
-  pdftex,%
+\hypersetup{
   pdfborder={0 0 0},%
   colorlinks={false},%
   % cria "bookmarks" no PDF até o 4° nível,
