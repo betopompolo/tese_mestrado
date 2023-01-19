@@ -1,7 +1,5 @@
 \begin{resumo}
 
-\glsunsetall
-
 Ferramentas de busca de código-fonte a partir de linguagem natural são cada vez mais importantes no dia a dia de engenheiros e desenvolvedores de \textit{software}. Atualmente, modelos \textit{transformers} são o estado da arte em diversas tarefas da área de \gls{nlp}, como busca de código-fonte a partir de linguagem natural. Porém, tais modelos requerem muito tempo e recursos computacionais para serem treinados em um determinado domínio (\textit{fine-tuning)}. Por outro lado, redes neurais clássicas como \gls{mlp}, por exemplo, necessitam de menos recursos para seu treinamento, porém não obtém os resultados dos modelos \textit{transformers}. Diante desse contexto, o objetivo do presente trabalho é criar e avaliar um modelo de rede neural para comparação de \textit{embeddings} gerados por redes \textit{transformers} de dois domínios diferentes: linguagem natural e linguagem de programação. Para tanto, serão utilizados seis modelos \textit{transformers}: 3 de linguagem natural e 3 de código-fonte. Além disso, será treinada uma rede neural a fim de encontrar semelhanças entre os \textit{embeddings} gerados por dois domínios diferentes. Com isso, espera-se obter precisão semelhante ao de modelos \textit{transformers} após o \textit{fine-tuning}, sem ser necessário que tais modelos passem por tal processo.
 \keywords{busca de código-fonte, recuperação de código-fonte, linguagem natural, transformers, embedding}
 
@@ -13,3 +11,5 @@ Code search tools using natural language queries are becoming an essential tool 
 
 \keywords{code search, code retrieval, natural language, transformers, embedding}
 \end{abstract}
+
+\glsresetall
